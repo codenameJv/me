@@ -55,7 +55,7 @@ onUnmounted(() => {
   <div class="fixed inset-0 z-50 flex items-end justify-center pointer-events-none">
     <!-- Soft glow behind the character -->
     <div
-      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full bg-amber-400/15 blur-3xl transition-opacity duration-[2000ms]"
+      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-40 sm:w-64 sm:h-64 rounded-full bg-amber-400/15 blur-3xl transition-opacity duration-[2000ms]"
       :class="visible ? 'opacity-100' : 'opacity-0'"
     />
     <!-- Speech bubble + character column -->
