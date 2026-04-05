@@ -89,7 +89,7 @@ onUnmounted(() => {
       <img
         :src="mainCharacter"
         alt="Main character"
-        class="h-[45vh] sm:h-[50vh] md:h-[60vh] w-auto drop-shadow-2xl transition-all duration-[1200ms] ease-out"
+        class="h-[45vh] sm:h-[50vh] md:h-[60vh] w-auto drop-shadow-md sm:drop-shadow-2xl transition-all duration-[1200ms] ease-out"
         :class="[
           visible ? 'opacity-100 translate-y-0 animate-idle' : 'opacity-0 translate-y-16',
           isChatMode ? 'mb-[60px]' : '',
