@@ -1,38 +1,58 @@
-# me
+# Me
 
-This template should help get you started developing with Vue 3 in Vite.
+An interactive personal website built with Vue 3, Vite, and Tailwind CSS. Features a welcoming landing page with an animated character companion.
 
-## Recommended IDE Setup
+## Tech Stack
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **[Vue 3](https://vuejs.org/)** - UI framework (Composition API)
+- **[Vite 7](https://vite.dev/)** - Build tool and dev server
+- **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[Vue Router 4](https://router.vuejs.org/)** - Client-side routing
 
-## Recommended Browser Setup
+## Project Structure
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+```
+src/
+├── assets/          # Global styles and static assets
+├── components/      # Reusable Vue components
+│   └── AnimatedCharacter.vue   # Animated character overlay
+├── router/          # Vue Router configuration
+├── views/           # Page-level components
+│   └── HomeView.vue
+├── App.vue          # Root component
+└── main.js          # App entry point
+```
 
-## Customize configuration
+## Getting Started
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Prerequisites
 
-## Project Setup
+- Node.js `^20.19.0` or `>=22.12.0`
+
+### Install dependencies
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Development
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Build for production
 
 ```sh
 npm run build
 ```
+
+### Preview production build
+
+```sh
+npm run preview
+```
+
+## IDE Setup
+
+[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) extension.
