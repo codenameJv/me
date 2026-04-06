@@ -38,7 +38,8 @@ onUnmounted(() => {
       @submit.prevent="sendMessage"
     >
       <input
-        v-model="inputText"
+        :value="inputText"
+        @input="inputText = $event.target.value"
         type="text"
         placeholder="Ask me anything..."
         :disabled="chatIsTyping"
