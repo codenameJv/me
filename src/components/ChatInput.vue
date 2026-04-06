@@ -47,7 +47,7 @@ onUnmounted(() => {
       />
       <button
         type="submit"
-        :disabled="chatIsTyping || !inputText.trim()"
+        :disabled="chatIsTyping"
         class="rounded-full bg-amber-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-amber-500 disabled:opacity-40 disabled:hover:bg-amber-600"
       >
         Send
