@@ -1,5 +1,6 @@
 import { ref, computed, watch } from 'vue'
 import { scenes } from '@/data/scenes.js'
+import { startTypingSound, stopTypingSound } from '@/composables/useTypingSound.js'
 
 const mode = ref('story')
 const isChatMode = computed(() => mode.value === 'chat')
@@ -44,7 +45,10 @@ watch(
     }
     isTyping.value = true
     const delay = currentScene.value.speechDelay ?? 400
-    timeoutId = setTimeout(() => typeNext(text), delay)
+    timeoutId = setTimeout(() => {
+      startTypingSound(text.length, CHAR_DELAY)
+      typeNext(text)
+    }, delay)
   },
   { immediate: true }
 )
@@ -64,6 +68,7 @@ function goBack() {
 function handleInteraction() {
   if (isTyping.value) {
     clearTypewriter()
+    stopTypingSound()
     displayedText.value = speechText.value
     isTyping.value = false
   } else if (!isLastScene.value) {

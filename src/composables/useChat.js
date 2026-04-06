@@ -1,5 +1,6 @@
 import { ref, computed } from 'vue'
 import { greetingMessage, findResponse } from '@/data/chatResponses.js'
+import { startTypingSound, stopTypingSound } from '@/composables/useTypingSound.js'
 
 const chatDisplayedText = ref('')
 const chatIsTyping = ref(false)
@@ -52,12 +53,16 @@ function showResponseFull(text) {
   chatDisplayedText.value = ''
   chatIsTyping.value = true
   typewriterCharIndex = 0
-  typewriterTimeoutId = setTimeout(() => typeText(text), 100)
+  typewriterTimeoutId = setTimeout(() => {
+    startTypingSound(text.length, CHAR_DELAY)
+    typeText(text)
+  }, 100)
 }
 
 function skipChatTyping() {
   if (!chatIsTyping.value) return
   clearTypewriter()
+  stopTypingSound()
   chatDisplayedText.value = currentFullText
   chatIsTyping.value = false
 }
