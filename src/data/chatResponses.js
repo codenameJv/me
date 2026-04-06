@@ -20,17 +20,27 @@ const responses = [
   // Work / job
   {
     keywords: ['work', 'job', 'trabaho', 'career', 'profession', 'ginagawa', 'living', 'employed'],
-    text: "Software developer po ako. Basically, gumagawa ako ng websites and apps. Medyo nerdy pakinggan pero fulfilling naman siya. At least yung work ko, pwede kahit saan basta may laptop at wifi haha.",
+    text: "Software developer po ako. Basically, gumagawa ako ng websites and apps. Fulfilling naman siya. At least yung work ko, pwede kahit saan basta may laptop at wifi haha.",
   },
   // Hobbies
   {
     keywords: ['hobby', 'hobbies', 'fun', 'free time', 'spare time', 'libangan', 'trip', 'interests', 'interest'],
-    text: "Mag motor at mag explore ng mga places! Dagat, city lights, scenic roads — lahat trip ko. Dati gamer ako pero ngayon more on chill na lang, scrolling sa TikTok, and minsan nag cocode pa rin for fun. Oo, nerd talaga HAHAHA.",
+    text: "Mag motor at mag explore ng mga places! Dagat, city lights, scenic roads — lahat trip ko. Mahilig din ako mag cook and mag drawing — arts in general trip ko. Dati gamer ako pero ngayon more on chill na lang, scrolling sa TikTok, and minsan nag cocode pa rin for fun haha.",
   },
   // Motorcycle / scooter
   {
     keywords: ['motorcycle', 'motor', 'bike', 'ride', 'riding', 'scooter'],
     text: "I have a scooter! Trip ko mag lakad lakad mag isa or with friends. 2 accidents na total ko, buhay pa naman HAHAHAHA. Favorite ko yung mga rides na may ocean view or city lights sa gabi.",
+  },
+  // Cooking
+  {
+    keywords: ['cook', 'cooking', 'luto', 'lutong', 'kusina', 'recipe', 'chef'],
+    text: "Oo! Mahilig ako mag cook. Hindi naman ako chef level pero trip ko mag experiment sa kusina. Satisfying kasi pag nagustuhan yung niluto mo haha. Luto kita someday? 😄",
+  },
+  // Art / drawing
+  {
+    keywords: ['art', 'draw', 'drawing', 'sketch', 'paint', 'guhit', 'artwork', 'creative'],
+    text: "Mahilig ako mag drawing! Minsan pag may free time, nag ssketch ako kahit random lang. Hindi naman ako super galing pero it's therapeutic for me. Arts in general trip ko talaga.",
   },
   // Looks / appearance
   {
@@ -80,7 +90,7 @@ const responses = [
   // Pet
   {
     keywords: ['pet', 'dog', 'cat', 'aso', 'pusa', 'animal', 'hayop', 'fur baby', 'furbaby'],
-    text: "Wala akong pet ngayon eh, pero dog person ako! Gusto ko mag alaga ng aso someday. Yung golden retriever sana or corgi. Cute kasi HAHAHA.",
+    text: "Actually, I have 7 dogs and 5 cats hahaha. Pet lover talaga ako eh, di ko kayang walang fur babies sa paligid 😄",
   },
   // Movie / series / show
   {
