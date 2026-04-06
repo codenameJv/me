@@ -1,11 +1,38 @@
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useChat } from '@/composables/useChat.js'
 
 const { inputText, chatIsTyping, sendMessage } = useChat()
+
+const bottomOffset = ref(0)
+
+function updatePosition() {
+  const vv = window.visualViewport
+  if (vv) {
+    bottomOffset.value = window.innerHeight - vv.height - vv.offsetTop
+  }
+}
+
+onMounted(() => {
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', updatePosition)
+    window.visualViewport.addEventListener('scroll', updatePosition)
+  }
+})
+
+onUnmounted(() => {
+  if (window.visualViewport) {
+    window.visualViewport.removeEventListener('resize', updatePosition)
+    window.visualViewport.removeEventListener('scroll', updatePosition)
+  }
+})
 </script>
 
 <template>
-  <div class="fixed bottom-0 left-0 right-0 z-[60] pointer-events-auto">
+  <div
+    class="fixed left-0 right-0 z-[60] pointer-events-auto transition-[bottom] duration-100"
+    :style="{ bottom: bottomOffset + 'px' }"
+  >
     <form
       class="flex items-center gap-2 bg-gray-950/80 backdrop-blur-md border-t border-white/10 px-4 py-3 safe-bottom"
       @submit.prevent="sendMessage"
